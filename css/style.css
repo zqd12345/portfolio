@@ -92,9 +92,9 @@ button{font-family:inherit}
 }
 .hero-bg::before{
   content:"";position:absolute;inset:0;
-  background-image:url("../assets/images/ai/空白应答医院场景.webp");
-  background-size:cover;background-position:center 36%;
-  opacity:.07;filter:saturate(.65) brightness(.9);
+  background-image:url("../assets/images/ai/黑神话风格东方女祭司.webp");
+  background-size:cover;background-position:center 30%;
+  opacity:.10;filter:saturate(.75) brightness(.9);
 }
 .hero-bg::after{ /* 细颗粒质感 */
   content:"";position:absolute;inset:0;opacity:.05;mix-blend-mode:screen;
