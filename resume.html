@@ -5,160 +5,287 @@
 <title>朱启东 · 简历</title>
 <style>
   :root{
-    --ink:#1c1e24;
-    --ink-2:#3c414c;
-    --muted:#6a7280;
-    --line:#dcdfe6;
-    --accent:#b97d2a;
+    --ink:#12161f;
+    --ink-2:#1a1f2a;
+    --paper:#fbfaf7;
+    --text:#1d2129;
+    --muted:#5c6470;
+    --faint:#8a8f99;
+    --amber:#c8872f;
+    --amber-soft:#e5a33c;
+    --line:#ddd8cf;
+    --serif:"SimSun","Songti SC","Noto Serif SC",serif;
+    --sans:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif;
+    --mono:"Consolas","SF Mono",monospace;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  @page{size:A4;margin:14mm 15mm}
-  html,body{background:#fff;color:var(--ink);
-    font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif;
-    font-size:10.2pt;line-height:1.62;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .wrap{max-width:800px;margin:0 auto}
+  @page{size:A4;margin:0}
+  html,body{width:210mm;height:297mm;background:#fff;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-family:var(--sans);color:var(--text);font-size:8.6pt;line-height:1.62}
+  ul{list-style:none}
 
-  header{border-bottom:2.5px solid var(--ink);padding-bottom:10px;margin-bottom:14px;
-    display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
-  h1{font-family:"SimSun","Songti SC",serif;font-size:30pt;letter-spacing:.18em;line-height:1.1}
-  .head-right{text-align:right;font-size:9.6pt;color:var(--ink-2);line-height:1.8}
-  .head-right b{color:var(--ink)}
-  .head-right .apply{color:var(--accent);font-weight:700}
+  .page{width:210mm;height:297mm;display:flex;background:var(--paper);overflow:hidden}
 
-  section{margin-bottom:13px}
-  h2{font-size:11.5pt;letter-spacing:.24em;color:var(--ink);
-    padding-bottom:4px;margin-bottom:8px;border-bottom:1px solid var(--line);position:relative}
-  h2::after{content:"";position:absolute;left:0;bottom:-1px;width:44px;height:2px;background:var(--accent)}
+  /* ================= 左侧深色栏 ================= */
+  .side{
+    width:62mm;flex:none;background:var(--ink);color:#e9e5dd;
+    padding:9mm 7.5mm 7mm;position:relative;overflow:hidden;
+    display:flex;flex-direction:column;
+  }
+  .side::before{
+    content:"";position:absolute;width:120mm;height:120mm;border-radius:50%;
+    right:-72mm;top:-60mm;
+    background:radial-gradient(circle,rgba(229,163,60,.16),rgba(229,163,60,0) 62%);
+  }
+  .side::after{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:1.1mm;
+    background:linear-gradient(180deg,var(--amber-soft),rgba(200,135,47,.15) 55%,transparent);
+  }
+  .side > *{position:relative;z-index:1}
 
-  p.lead{color:var(--ink-2);margin-bottom:5px}
-  .hl{color:var(--ink);font-weight:700}
+  .photo-wrap{position:relative;width:43mm;margin:0 auto 7mm}
+  .photo-wrap::before{
+    content:"";position:absolute;inset:2.2mm -2.2mm -2.2mm 2.2mm;
+    border:.45mm solid rgba(229,163,60,.6);border-radius:2mm;
+  }
+  .photo{
+    position:relative;width:43mm;height:57.3mm;object-fit:cover;object-position:center 22%;
+    border-radius:2mm;border:.35mm solid rgba(255,255,255,.22);display:block;
+  }
 
-  .skill{margin-bottom:7px}
-  .skill h3{font-size:10.4pt;color:var(--ink);margin-bottom:2px}
-  .skill h3 span{color:var(--accent);font-weight:400;margin-right:6px}
-  .skill p{color:var(--ink-2)}
+  .side-block{margin-bottom:5.6mm}
+  .side-label{
+    font-family:var(--mono);font-size:6.6pt;letter-spacing:.22em;color:var(--amber-soft);
+    display:flex;align-items:center;gap:2.2mm;margin-bottom:2.4mm;
+  }
+  .side-label::after{content:"";height:.3mm;flex:1;background:rgba(229,163,60,.28)}
 
-  .job{margin-bottom:9px}
-  .job-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-  .job-head h3{font-size:10.6pt}
-  .job-head .org{color:var(--accent);font-size:9.8pt}
-  .job-head .date{color:var(--muted);font-size:9.4pt;margin-left:auto;white-space:nowrap}
-  ul{list-style:none;margin-top:3px}
-  li{position:relative;padding-left:13px;color:var(--ink-2);margin-bottom:2px}
-  li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+  .contact-line{margin-bottom:2.2mm;display:flex;flex-direction:column;gap:.4mm}
+  .contact-k{font-family:var(--mono);font-size:6.2pt;letter-spacing:.16em;color:#8d95a3}
+  .contact-v{font-size:8.2pt;color:#f0ede6;letter-spacing:.02em}
 
-  .proj{margin-bottom:7px}
-  .proj h3{font-size:10.4pt;margin-bottom:2px}
-  .proj h3 em{font-style:normal;font-size:9pt;color:var(--accent);border:1px solid rgba(185,125,42,.4);
-    border-radius:99px;padding:1px 8px;margin-left:6px;vertical-align:1px}
+  .fact{margin-bottom:2mm}
+  .fact-k{font-size:6.8pt;color:#8d95a3;letter-spacing:.08em}
+  .fact-v{font-size:8.4pt;color:#f0ede6;font-weight:600}
 
-  .foot{margin-top:14px;padding-top:8px;border-top:1px solid var(--line);
-    color:var(--muted);font-size:9pt;display:flex;justify-content:space-between}
-  .print-tip{position:fixed;right:14px;bottom:14px;background:#111;color:#fff;font-size:12px;
-    padding:8px 14px;border-radius:99px;opacity:.85}
+  .chips{display:flex;flex-wrap:wrap;gap:1.4mm}
+  .chip{
+    font-size:7pt;line-height:1.5;padding:.7mm 2.2mm;border-radius:999px;
+    color:#e8d4b4;border:.25mm solid rgba(229,163,60,.35);background:rgba(229,163,60,.07);
+  }
+  .side-note{font-size:7.6pt;color:#c9c4ba;line-height:1.62}
+  .side-note b{color:#f0ede6;font-weight:600}
+
+  .qr-block{margin-top:auto;padding-top:4mm}
+  .qr-row{display:flex;align-items:center;gap:3mm}
+  .qr-tile{background:#fff;padding:1.4mm;border-radius:1.6mm;width:19mm;height:19mm;flex:none}
+  .qr-tile img{width:100%;height:100%;display:block}
+  .qr-text{font-size:6.9pt;color:#aab0bb;line-height:1.55}
+  .qr-text b{display:block;color:#f0ede6;font-size:7.6pt;letter-spacing:.06em;margin-bottom:.6mm}
+  .side-foot{
+    margin-top:4mm;padding-top:2.6mm;border-top:.25mm solid rgba(255,255,255,.12);
+    font-family:var(--mono);font-size:6pt;letter-spacing:.2em;color:#6d7480;
+    display:flex;justify-content:space-between;
+  }
+
+  /* ================= 右侧主内容 ================= */
+  .main{
+    width:148mm;flex:none;background:var(--paper);
+    padding:11mm 11mm 8mm 10mm;display:flex;flex-direction:column;
+  }
+  .kicker{
+    font-family:var(--mono);font-size:7pt;letter-spacing:.26em;color:#a4661c;
+    text-transform:uppercase;
+  }
+  .name{
+    font-family:var(--serif);font-size:30pt;font-weight:700;letter-spacing:.14em;
+    line-height:1.15;margin-top:1.2mm;
+  }
+  .name-rule{width:15mm;height:1.1mm;background:var(--amber);margin:2.2mm 0 2.4mm}
+  .headline{font-size:9.4pt;font-weight:700;letter-spacing:.04em}
+  .headline span{color:var(--amber)}
+  .meta{font-size:8pt;color:var(--muted);margin-top:.8mm;letter-spacing:.06em}
+
+  .sec{margin-top:4.6mm}
+  .sec-head{display:flex;align-items:baseline;gap:2mm;border-bottom:.25mm solid var(--line);
+    padding-bottom:1.2mm;margin-bottom:2.4mm}
+  .sec-mark{width:1.7mm;height:1.7mm;background:var(--amber);border-radius:.3mm;flex:none;transform:translateY(-.15mm)}
+  .sec-cn{font-size:10pt;font-weight:700;letter-spacing:.16em}
+  .sec-en{font-family:var(--mono);font-size:6.3pt;letter-spacing:.2em;color:#a08b6a;margin-left:auto;text-transform:uppercase}
+
+  .para{font-size:8.5pt;color:#3f454f;line-height:1.72;text-align:justify}
+  .para + .para{margin-top:1.4mm}
+  .para b{color:var(--text)}
+
+  .job{position:relative;padding-left:3.6mm;margin-bottom:2.8mm}
+  .job:last-child{margin-bottom:0}
+  .job::before{content:"";position:absolute;left:0;top:1mm;bottom:.4mm;width:.28mm;background:#e4ddd2}
+  .job::after{content:"";position:absolute;left:-.55mm;top:.9mm;width:1.4mm;height:1.4mm;border-radius:50%;
+    background:var(--amber);box-shadow:0 0 0 .55mm rgba(200,135,47,.14)}
+  .job-head{display:flex;align-items:baseline;gap:1.8mm;flex-wrap:wrap}
+  .job-role{font-size:9.1pt;font-weight:700;letter-spacing:.03em}
+  .job-org{font-size:8.4pt;color:#a4661c;font-weight:600}
+  .job-date{font-family:var(--mono);font-size:7.4pt;color:var(--faint);margin-left:auto;white-space:nowrap;letter-spacing:.02em}
+  .job ul{margin-top:.8mm}
+  .job li{position:relative;padding-left:3mm;font-size:8.3pt;color:#464c56;line-height:1.6}
+  .job li::before{content:"·";position:absolute;left:.4mm;top:-.2mm;color:var(--amber);font-weight:700;font-size:10pt}
+
+  .proj{margin-bottom:2.4mm}
+  .proj:last-child{margin-bottom:0}
+  .proj-title{font-size:8.9pt;font-weight:700;display:flex;align-items:center;gap:1.8mm}
+  .proj-title .badge{
+    font-size:6.4pt;font-weight:400;color:#a4661c;border:.25mm solid rgba(200,135,47,.4);
+    border-radius:999px;padding:.2mm 1.8mm;letter-spacing:.06em;
+  }
+  .proj p{font-size:8.3pt;color:#464c56;line-height:1.66;margin-top:.6mm}
+
+  .edu-head{display:flex;align-items:baseline;gap:1.8mm;flex-wrap:wrap}
+  .edu-school{font-size:8.9pt;font-weight:700}
+  .edu-major{font-size:8.4pt;color:#a4661c;font-weight:600}
+  .edu-date{font-family:var(--mono);font-size:7.4pt;color:var(--faint);margin-left:auto}
+  .edu p{font-size:8.3pt;color:#464c56;line-height:1.62;margin-top:.6mm}
+
+  .main-foot{
+    margin-top:auto;padding-top:3mm;border-top:.25mm solid var(--line);
+    display:flex;justify-content:space-between;align-items:baseline;
+    font-family:var(--mono);font-size:6.6pt;letter-spacing:.1em;color:#9aa0aa;
+  }
+  .main-foot b{color:#a4661c;font-weight:600}
+  .print-tip{position:fixed;right:8mm;bottom:8mm;background:#12161f;color:#fff;font-size:8pt;
+    padding:2mm 5mm;border-radius:99px;opacity:.9}
   @media print{.print-tip{display:none}}
 </style>
 </head>
 <body>
 <div class="print-tip">按 Ctrl+P 可另存为 PDF</div>
-<div class="wrap">
+<div class="page">
 
-  <header>
-    <h1>朱启东</h1>
-    <div class="head-right">
-      <div class="apply">求职意向：AI 内容创作 / 视觉设计师</div>
-      <div>男 · 24岁 · 1.5 年经验 · 期望城市：郑州</div>
-      <div><b>17630571207</b> ｜ 1433805257@qq.com</div>
+  <aside class="side">
+    <div class="photo-wrap">
+      <img class="photo" src="assets/证件照.jpg" alt="朱启东证件照">
     </div>
-  </header>
 
-  <section>
-    <h2>个人概述</h2>
-    <p class="lead"><span class="hl">1.5 年视觉设计及 AI 内容制作经验</span>，能够独立完成 AI 短剧、AI 漫剧全流程制作（剧本撰写 → AI 生图 / 生视频 → 后期剪辑）。具备扎实的视觉传达设计功底，同时持续深耕 AIGC 创作领域，致力于将 AI 工具与传统设计能力结合，产出高质量的视觉内容。</p>
-    <p class="lead">正在撰写个人长篇小说，具备较强的文案策划与叙事能力，能够为视觉作品提供系统性的内容支撑。</p>
-  </section>
+    <div class="side-block">
+      <div class="side-label">CONTACT · 联系方式</div>
+      <div class="contact-line"><span class="contact-k">TEL</span><span class="contact-v">17630571207</span></div>
+      <div class="contact-line"><span class="contact-k">MAIL</span><span class="contact-v">1433805257@qq.com</span></div>
+      <div class="contact-line"><span class="contact-k">QQ · 微信同号</span><span class="contact-v">1433805257</span></div>
+    </div>
 
-  <section>
-    <h2>专业技能</h2>
-    <div class="skill">
-      <h3><span>01</span>AI 内容创作</h3>
-      <p>精通主流 AI 生图工具（Midjourney、Stable Diffusion、即梦等），熟练运用 AI 视频生成工具（Runway、Pika、即梦、小云雀、可灵等），能够独立完成从提示词工程到成片输出的完整 AI 短剧 / 漫剧制作流程；具备成熟的 AI 内容工作流搭建能力（角色一致性控制、画面风格统一、批量生图与后期精修）；熟练运用主流 Agent（Claude、Codex 等），具备 API 搭建、Skill 训练能力。</p>
+    <div class="side-block">
+      <div class="side-label">TARGET · 求职信息</div>
+      <div class="fact"><div class="fact-k">求职意向</div><div class="fact-v">AI 内容创作 / 视觉设计师</div></div>
+      <div class="fact"><div class="fact-k">期望城市</div><div class="fact-v">郑州</div></div>
+      <div class="fact"><div class="fact-k">到岗时间</div><div class="fact-v">可随时到岗</div></div>
     </div>
-    <div class="skill">
-      <h3><span>02</span>视觉设计</h3>
-      <p>精通 Photoshop、Illustrator 等设计工具，具备成熟的平面设计、电商页面设计与品牌视觉设计能力；具备扎实的色彩搭配、版式构图与字体设计审美素养，能够独立完成商业级视觉方案。</p>
-    </div>
-    <div class="skill">
-      <h3><span>03</span>视频制作</h3>
-      <p>熟练使用 Premiere、剪映等剪辑软件，可独立完成视频剪辑、调色、卡点与音效合成；掌握短视频平台（抖音、快手）内容节奏与爆款逻辑，具备商业视频的策划与制作能力。</p>
-    </div>
-    <div class="skill">
-      <h3><span>04</span>文案与策划</h3>
-      <p>具备较强的文案撰写能力，能够独立完成短视频脚本、短剧剧本撰写；正在创作个人长篇小说（已写百万字）。</p>
-    </div>
-  </section>
 
-  <section>
-    <h2>工作经历</h2>
-    <div class="job">
-      <div class="job-head"><h3>视频制作</h3><span class="org">安阳觅图网络科技有限公司</span><span class="date">2026.05 — 2026.09.02</span></div>
-      <ul>
-        <li>负责 AI 短剧、AI 漫剧及 AI 情绪短片的全流程制作，独立完成从剧本构思、分镜设计、AI 生图 / 生视频到后期剪辑与成片输出的完整链路。</li>
-        <li>主导修图与修文工作，把控 AI 生成内容的视觉质量与文本精准度，确保产出内容符合平台发布标准。</li>
-        <li>负责视频抽卡与素材管理，建立高效的素材分类与复用体系，提升内容生产效率。</li>
-      </ul>
+    <div class="side-block">
+      <div class="side-label">TOOLS · 常用工具</div>
+      <div class="chips">
+        <span class="chip">Midjourney</span><span class="chip">Stable Diffusion</span><span class="chip">即梦</span>
+        <span class="chip">Runway</span><span class="chip">Pika</span><span class="chip">小云雀</span><span class="chip">可灵</span>
+        <span class="chip">Photoshop</span><span class="chip">Illustrator</span><span class="chip">Premiere</span><span class="chip">剪映</span>
+        <span class="chip">Agent · API</span>
+      </div>
     </div>
-    <div class="job">
-      <div class="job-head"><h3>AI 视频制作</h3><span class="org">恒光文化有限公司</span><span class="date">2026.02 — 2026.05</span></div>
-      <ul>
-        <li>负责 AI 短剧及 AI 漫剧的视频生成与后期剪辑，运用 AI 视频工具完成从分镜素材到成品视频的转化与输出。</li>
-        <li>参与 AI 内容的创意策划，根据项目需求进行视觉风格定位与画面设计，确保成片质量与创意表达的一致性。</li>
-        <li>协作完成多个 AI 视频项目的按时交付，积累了团队协作与项目流程管理的实操经验。</li>
-      </ul>
-    </div>
-    <div class="job">
-      <div class="job-head"><h3>电商主管</h3><span class="org">安阳龙升装饰广告</span><span class="date">2025.01 — 2026.01</span></div>
-      <ul>
-        <li>负责店铺整体视觉设计，包括主图、详情页、首页装修等，以品牌化视觉语言提升店铺调性。</li>
-        <li>主导私域流量运营与转化，两天内建立百人私域社群，通过内容运营与用户触达实现较高转化率。</li>
-        <li>统筹对外运营与推广素材制作，结合流行趋势与平台热点进行视觉内容的快速迭代。</li>
-      </ul>
-    </div>
-  </section>
 
-  <section>
-    <h2>项目经验</h2>
-    <div class="proj">
-      <h3>AI 短剧全流程制作 <em>独立项目</em></h3>
-      <p>独立完成 AI 真人短剧、AI 漫剧及 AI 情绪短片的多部全流程制作：从故事构思与剧本编写起步，运用 Midjourney / Stable Diffusion 完成角色、场景、道具设计与关键帧、分镜生成，通过即梦 / 小云雀 / Runway / Pika 等工具完成视频生成，最后在剪映 / Premiere 中完成剪辑、调色与音效合成。项目覆盖情感、悬疑、玄幻、宏大叙事、黑暗奇幻、文艺复兴油画美学等多个题材与风格。</p>
+    <div class="side-block">
+      <div class="side-label">NOTES · 附加信息</div>
+      <div class="side-note"><b>百万字长篇小说</b>创作中，文字与叙事功底扎实；持续关注 AIGC 前沿，保持创作与行业同步。</div>
     </div>
-    <div class="proj">
-      <h3>电商视觉升级项目</h3>
-      <p>主导龙升装饰店铺的整体视觉升级，重新设计品牌视觉体系与页面架构，优化主图点击率、详情页停留时长与首页视觉引导；同步搭建私域社群运营体系，实现流量沉淀与复购转化。</p>
+
+    <div class="qr-block">
+      <div class="qr-row">
+        <div class="qr-tile"><img src="assets/qr-portfolio.png" alt="作品集二维码"></div>
+        <div class="qr-text"><b>在线作品集</b>扫码查看 11 部 AI 短片与视觉设计作品</div>
+      </div>
+      <div class="side-foot"><span>PORTFOLIO</span><span>2026</span></div>
     </div>
-  </section>
+  </aside>
 
-  <section>
-    <h2>教育经历</h2>
-    <div class="job">
-      <div class="job-head"><h3>视觉传达设计专业 · 大专</h3><span class="org">安阳职业技术学院</span><span class="date">2021 — 2024</span></div>
-      <p>主修视觉传达设计，系统学习设计原理、色彩构成、版式设计等核心课程；在校期间自学插画、摄影与视频剪辑，多次参加校外设计比赛并获奖。</p>
+  <main class="main">
+    <div class="kicker">AI Content Creation / Visual Design</div>
+    <h1 class="name">朱启东</h1>
+    <div class="name-rule"></div>
+    <div class="headline">求职意向：<span>AI 内容创作 / 视觉设计师</span></div>
+    <div class="meta">男 · 24 岁 · 1.5 年经验 · 郑州 · 可随时到岗</div>
+
+    <section class="sec">
+      <div class="sec-head"><span class="sec-mark"></span><span class="sec-cn">个人概述</span><span class="sec-en">Profile</span></div>
+      <p class="para"><b>1.5 年视觉设计及 AI 内容制作经验</b>，能独立完成 AI 短剧、AI 漫剧与情绪短片的完整链路：剧本撰写 → AI 生图 / 生视频 → 后期剪辑。具备扎实的视觉传达设计功底，持续深耕 AIGC 创作，善用 AI 工具与传统设计能力结合，产出高质量视觉内容。</p>
+      <p class="para">正在创作个人长篇小说（已写百万字），具备较强的文案策划与叙事能力，能为视觉作品提供系统性的内容支撑。</p>
+    </section>
+
+    <section class="sec">
+      <div class="sec-head"><span class="sec-mark"></span><span class="sec-cn">工作经历</span><span class="sec-en">Experience</span></div>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-role">视频制作</span>
+          <span class="job-org">安阳觅图网络科技有限公司</span>
+          <span class="job-date">2026.05 — 2026.09.02</span>
+        </div>
+        <ul>
+          <li>负责 AI 短剧、AI 漫剧及情绪短片的制作，独立完成剧本构思、分镜设计、AI 生图 / 生视频到剪辑成片的完整链路。</li>
+          <li>主导修图与修文，把控 AI 内容的视觉质量与文本精准度；建立素材分类与复用体系，提升内容生产效率。</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-role">AI 视频制作</span>
+          <span class="job-org">恒光文化有限公司</span>
+          <span class="job-date">2026.02 — 2026.05</span>
+        </div>
+        <ul>
+          <li>运用 AI 视频工具完成分镜素材到成品视频的转化输出，参与创意策划与视觉风格定位，保证成片质量与创意一致。</li>
+          <li>协作完成多个 AI 视频项目按时交付，积累团队协作与项目流程管理经验。</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-role">电商主管</span>
+          <span class="job-org">安阳龙升装饰广告</span>
+          <span class="job-date">2025.01 — 2026.01</span>
+        </div>
+        <ul>
+          <li>负责店铺整体视觉设计（主图、详情页、首页装修），以品牌化视觉语言提升店铺调性。</li>
+          <li>主导私域运营与转化：两天建立百人社群并实现较高转化；统筹推广素材，结合平台热点快速迭代。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-head"><span class="sec-mark"></span><span class="sec-cn">项目经验</span><span class="sec-en">Projects</span></div>
+      <div class="proj">
+        <div class="proj-title">AI 短剧全流程制作 <span class="badge">独立项目</span></div>
+        <p>独立完成多部 AI 真人短剧、漫剧及情绪短片：以 Midjourney / Stable Diffusion 完成角色、场景与分镜设计，用即梦 / 小云雀 / Runway / Pika 生成视频，最后在剪映 / Premiere 完成剪辑、调色与音效。题材覆盖情感、悬疑、玄幻、黑暗奇幻与文艺复兴油画美学。</p>
+      </div>
+      <div class="proj">
+        <div class="proj-title">电商视觉升级项目</div>
+        <p>主导龙升装饰店铺视觉升级：重构品牌视觉体系与页面架构，优化主图点击率、详情页停留与首页视觉引导；同步搭建私域社群运营体系，实现流量沉淀与复购转化。</p>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-head"><span class="sec-mark"></span><span class="sec-cn">教育经历</span><span class="sec-en">Education</span></div>
+      <div class="edu">
+        <div class="edu-head">
+          <span class="edu-school">安阳职业技术学院</span>
+          <span class="edu-major">视觉传达设计 · 大专</span>
+          <span class="edu-date">2021 — 2024</span>
+        </div>
+        <p>主修设计原理、色彩构成、版式设计等核心课程；自学插画、摄影与视频剪辑，多次参加校外设计比赛并获奖。</p>
+      </div>
+    </section>
+
+    <div class="main-foot">
+      <span>PORTFOLIO · <b>zqd12345.github.io/portfolio</b></span>
+      <span>RESUME · 2026.10</span>
     </div>
-  </section>
-
-  <section>
-    <h2>附加信息</h2>
-    <ul>
-      <li>正在创作个人长篇小说，具备较强的文字功底与叙事能力，能够独立撰写短剧剧本与视频脚本。</li>
-      <li>持续关注 AIGC 领域前沿动态，主动学习新工具与新技术，保持创作能力与行业趋势同步。</li>
-      <li>在线作品集：zqd12345.github.io/portfolio</li>
-    </ul>
-  </section>
-
-  <div class="foot">
-    <span>朱启东 · 简历</span>
-    <span>在线作品集 zqd12345.github.io/portfolio</span>
-  </div>
+  </main>
 </div>
 </body>
 </html>
