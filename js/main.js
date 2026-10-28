@@ -10,14 +10,14 @@
   /* ---------- 作品数据 ---------- */
   var WORKS = [
     /* ---- AI 视频 ---- */
-    {id:"v1", type:"video", cat:"video", code:"REEL 01", title:"空白应答", tag:"轻科幻情绪短片",
-     file:"assets/videos/1.空白应答.mp4", poster:"assets/posters/1.空白应答.webp",
+    {id:"v1", type:"video", cat:"video", code:"REEL 01", title:"空白应答", tag:"定格动画情绪短片",
+     file:"assets/videos/1.定格动画情绪短片《空白应答》.mp4", poster:"assets/posters/1.定格动画情绪短片《空白应答》.webp",
      meta:"720P · 约31MB · 01:50",
-     desc:"一个房间花了四十年把自己变成了人的身体。人离开后，它仍然在等。—— AI 情绪短片，约 135 秒，即梦 AI 图生视频。"},
-    {id:"v2", type:"video", cat:"video", code:"REEL 02", title:"人面巨树", tag:"暗黑奇幻短片",
-     file:"assets/videos/2.人面巨树.mp4", poster:"assets/posters/2.人面巨树.webp",
+     desc:"一个房间花了四十年把自己变成了人的身体。人离开后，它仍然在等。—— 定格动画质感的 AI 情绪短片，约 135 秒，即梦 AI 图生视频。"},
+    {id:"v2", type:"video", cat:"video", code:"REEL 02", title:"惊悚风格练习", tag:"风格练习",
+     file:"assets/videos/2.惊悚风格练习.mp4", poster:"assets/posters/2.惊悚风格练习.webp",
      meta:"720P · 约12MB · 00:44",
-     desc:"浓雾森林中，由万千亡魂面孔共生的人面巨树苏醒，开启轮回通道，指引林间亡魂完成一场充满宿命感的生命轮回仪式。—— 约 70 秒，即梦 AI 图生视频。"},
+     desc:"惊悚氛围的 AI 视频风格练习片段。"},
     {id:"v3", type:"video", cat:"video", code:"REEL 03", title:"黑神话风格练习", tag:"风格练习",
      file:"assets/videos/3.黑神话风格练习.mp4", poster:"assets/posters/3.黑神话风格练习.webp",
      meta:"720P · 约4MB · 00:15",
@@ -31,9 +31,22 @@
     {id:"v6", type:"video", cat:"video", code:"REEL 06", title:"人物微表情练习 2", tag:"风格练习",
      file:"assets/videos/6.人物微表情练习2.mp4", poster:"assets/posters/6.人物微表情练习2.webp",
      meta:"720P · 约3MB · 00:10", desc:"人物微表情与表演细节的 AI 视频练习片段。"},
-    {id:"v7", type:"video", cat:"video", code:"REEL 07", title:"真人风格片段", tag:"风格练习",
-     file:"assets/videos/7.真人风格片段.mp4", poster:"assets/posters/7.真人风格片段.webp",
+    {id:"v7", type:"video", cat:"video", code:"REEL 07", title:"真人短片片段", tag:"真人质感",
+     file:"assets/videos/7.真人短片片段.mp4", poster:"assets/posters/7.真人短片片段.webp",
      meta:"720P · 约24MB · 01:21", desc:"接近真人实拍质感的 AI 视频片段练习。"},
+    {id:"v8", type:"video", cat:"video", code:"REEL 08", title:"巨兽风格练习 2", tag:"风格练习",
+     file:"assets/videos/巨兽风格练习2.mp4", poster:"assets/posters/巨兽风格练习2.webp",
+     meta:"720P · 约2MB · 00:07", desc:"巨兽题材 AI 视频的续作练习片段。"},
+    {id:"v9", type:"video", cat:"video", code:"REEL 09", title:"海外短剧片段 1", tag:"海外短剧",
+     file:"assets/videos/海外短剧片段1.mp4", poster:"assets/posters/海外短剧片段1.webp",
+     meta:"720P · 约14MB · 01:12", desc:"海外短剧片段 —— 竖屏叙事的节奏与表演调度练习。"},
+    {id:"v10", type:"video", cat:"video", code:"REEL 10", title:"海外短剧片段 2", tag:"海外短剧",
+     file:"assets/videos/海外短剧片段2.mp4", poster:"assets/posters/海外短剧片段2.webp",
+     meta:"720P · 约18MB · 01:30", desc:"海外短剧片段 —— 竖屏构图的叙事节奏练习。"},
+    {id:"v11", type:"video", cat:"video", code:"REEL 11", title:"文艺复兴《暴风雨》", tag:"文艺复兴 · 无台词短片",
+     file:"assets/videos/文艺复兴《暴风雨》.mp4", poster:"assets/posters/文艺复兴《暴风雨》.webp",
+     meta:"720P · 约33MB · 01:58",
+     desc:"文艺复兴油画美学 × 无台词叙事：110 秒、10 个镜头、40 个生成单元。从金笼里的婚约，到暴雨中的奔跑——结尾不是殉情，而是两个人共同选择未来。"},
 
     /* ---- 剧本创作 ---- */
     {id:"s1", type:"script", cat:"script", code:"SCRIPT 01", title:"《人面巨树》分镜剧本", tag:"暗黑奇幻 · 约70秒成片",
@@ -48,6 +61,10 @@
      file:"assets/scripts/第4章_分镜剧本.docx", sub:"《第4章》",
      meta:"DOCX · 55镜12场 · 点击打开",
      desc:"55 镜 12 场末世怪谈：地下避难所里，安塞尔用聆听心声的能力对抗「收走者」，救下孩子，却付出代价——收走者记住了他。"},
+    {id:"s4", type:"script", cat:"script", code:"SCRIPT 04", title:"《暴风雨》分镜剧本", tag:"文艺复兴 · 110秒无台词",
+     file:"assets/scripts/暴风雨-分镜剧本.docx", sub:"《暴风雨》",
+     meta:"DOCX · 10镜40单元 · 点击打开",
+     desc:"一场奔向自由的私奔。文艺复兴油画美学 × 无台词叙事：10 个镜头拆成 40 个可独立生成的单元，每个单元包含首帧图提示词与图生视频运镜提示词，中英双语、自包含。前半段让观众替女主窒息，中段让她短暂相信幸福可以属于自己，后半段让婚礼把希望逐一拿走，最后用暴雨中的奔跑推向自由。"},
 
     /* ---- AI 概念与资产 ---- */
     {id:"a1", type:"image", cat:"asset", code:"CONCEPT 01", title:"东方女祭司 · 彩铅风格", src:"assets/images/ai/东方女祭司彩铅风格.webp", meta:"风格探索 · 点击查看大图"},
@@ -58,6 +75,10 @@
     {id:"a6", type:"image", cat:"asset", code:"CONCEPT 06", title:"空白应答 · 角色设定", src:"assets/images/ai/空白应答角色.webp", meta:"角色设计 · 点击查看大图"},
     {id:"a7", type:"image", cat:"asset", code:"CONCEPT 07", title:"蒙太奇 · 四季时间参考", src:"assets/images/ai/蒙太奇四季时间参考分镜图.webp", meta:"时间设计 · 点击查看大图"},
     {id:"a8", type:"image", cat:"asset", code:"CONCEPT 08", title:"黑神话风格东方女祭司", src:"assets/images/ai/黑神话风格东方女祭司.webp", meta:"风格探索 · 点击查看大图"},
+    {id:"a9", type:"image", cat:"asset", code:"CONCEPT 09", title:"《暴风雨》艺术展陈信息图", src:"assets/images/ai/《暴风雨》艺术展陈信息图.webp", meta:"展陈信息图 · 点击查看大图"},
+    {id:"a10", type:"image", cat:"asset", code:"CONCEPT 10", title:"贵族小姐角色设定图", src:"assets/images/ai/贵族小姐角色设定图.webp", meta:"角色设计 · 点击查看大图"},
+    {id:"a11", type:"image", cat:"asset", code:"CONCEPT 11", title:"黄色园丁角色设定图", src:"assets/images/ai/黄色园丁角色设定图.webp", meta:"角色设计 · 点击查看大图"},
+    {id:"a12", type:"image", cat:"asset", code:"CONCEPT 12", title:"暴雨中共撑斗篷的恋人", src:"assets/images/ai/暴雨中共撑斗篷的恋人.webp", meta:"场景设计 · 点击查看大图"},
 
     /* ---- 视觉设计 ---- */
     {id:"d1",  type:"image", cat:"design", code:"VISUAL 01", title:"VI 设计 · 封面", src:"assets/images/design/封面.webp", meta:"品牌视觉 · 点击查看大图"},
